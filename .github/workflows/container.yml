@@ -7,7 +7,7 @@ on:
     branches:
       - main
     paths:
-      # Only run this workflow when some change ocurred inside container
+      # Only run this workflow when some change ocurrs inside container
       - 'packages/container/**'
 
 defaults:
