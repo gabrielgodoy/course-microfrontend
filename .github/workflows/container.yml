@@ -1,10 +1,13 @@
 name: deploy-container
 
+# on designates when to run this workflow
+# what event is being watched
 on:
   push:
     branches:
       - main
     paths:
+      # Only run this workflow when some change ocurred inside container
       - 'packages/container/**'
 
 defaults:
@@ -25,4 +28,4 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: ''
+          AWS_DEFAULT_REGION: us-east-1
