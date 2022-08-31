@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2 # Official GitHub Action used to check-out a repository, so a workflow can access it
       - run: npm install
       - run: npm run build
 
